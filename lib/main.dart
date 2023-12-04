@@ -49,6 +49,7 @@ class MyApp extends StatelessWidget {
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 child: TextField(
+                  textInputAction: TextInputAction.next,
                   cursorColor: Colors.white,
                   onTapOutside: (input) {
                     nameFocus.unfocus();
