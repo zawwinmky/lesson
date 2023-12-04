@@ -47,20 +47,23 @@ class MyApp extends StatelessWidget {
                   color: Color.fromRGBO(54, 54, 54, 1.0),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 15),
-                child: TextField(
-                  textInputAction: TextInputAction.next,
-                  cursorColor: Colors.white,
-                  onTapOutside: (input) {
-                    nameFocus.unfocus();
-                  },
-                  focusNode: nameFocus,
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: "Phone or Email",
-                    hintStyle: TextStyle(
-                      fontSize: 20,
-                      color: Color.fromRGBO(175, 175, 175, 1.0),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: TextField(
+                    textInputAction: TextInputAction.next,
+                    cursorColor: Colors.white,
+                    onTapOutside: (input) {
+                      nameFocus.unfocus();
+                    },
+                    focusNode: nameFocus,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Phone or Email",
+                      hintStyle: TextStyle(
+                        fontSize: 20,
+                        color: Color.fromRGBO(175, 175, 175, 1.0),
+                      ),
                     ),
                   ),
                 ),
@@ -75,18 +78,21 @@ class MyApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 15),
-                child: TextField(
-                  focusNode: pwdFocus,
-                  cursorColor: Colors.white,
-                  onTapOutside: (input) {
-                    pwdFocus.unfocus();
-                  },
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: "Password",
-                    hintStyle: TextStyle(
-                      fontSize: 20,
-                      color: Color.fromRGBO(175, 175, 175, 1.0),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: TextField(
+                    focusNode: pwdFocus,
+                    cursorColor: Colors.white,
+                    onTapOutside: (input) {
+                      pwdFocus.unfocus();
+                    },
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Password",
+                      hintStyle: TextStyle(
+                        fontSize: 20,
+                        color: Color.fromRGBO(175, 175, 175, 1.0),
+                      ),
                     ),
                   ),
                 ),
@@ -100,7 +106,7 @@ class MyApp extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    width: 2,
+                    width: 1.5,
                     color: Colors.white70,
                   ),
                 ),
