@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(MyApp(),);
+void main() {
+  runApp(
+    MyApp(),
+  );
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,7 +15,68 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.arrow_back_rounded,size: 35,color: Colors.white,),
+          backgroundColor: Color.fromRGBO(0, 0, 0, 1.0),
+          leading: Icon(
+            Icons.arrow_back_rounded,
+            size: 35,
+            color: Colors.white,
+          ),
+          title: Image.asset("assets/nflogo.png",width: 150,),
+        ),
+        backgroundColor: Color.fromRGBO(0, 0, 0, 1.0),
+        body: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.white,
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Phone or Email",
+                    hintStyle: TextStyle(
+                      fontSize: 20,
+                      color: Color.fromRGBO(193, 193, 193, 1.0),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.white,
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Password",
+                    hintStyle: TextStyle(
+                      fontSize: 20,
+                      color: Color.fromRGBO(193, 193, 193, 1.0),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20,),
+
+            ],
+          ),
         ),
       ),
     );
