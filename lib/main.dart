@@ -74,6 +74,24 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20,),
+              Container(
+                height: 60,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.white,
+                  ),
+                ),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(0, 0, 0, 1.0),
+                  ),
+                  onPressed: (){},
+                  child: Text("Sign in",style: TextStyle(fontSize: 22,color: Color.fromRGBO(250, 250, 250, 1.0)),),
+                ),
+              ),
 
             ],
           ),
