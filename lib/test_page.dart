@@ -19,16 +19,16 @@ class _TestPageState extends State<TestPage> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color.fromRGBO(0, 0, 0, 1.0),
+        backgroundColor: const Color.fromRGBO(0, 0, 0, 1.0),
         title: Image.asset(
           "assets/nflogo.png",
           width: 140,
         ),
       ),
       body: Container(
-        color: Color.fromRGBO(45, 45, 45, 1.0),
+        color: const Color.fromRGBO(45, 45, 45, 1.0),
         height: double.infinity,
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Center(
           child: TextField(
             obscuringCharacter: "*",
@@ -47,12 +47,12 @@ class _TestPageState extends State<TestPage> {
                       onTap: () {
                         showPwd();
                       },
-                      child: xShowpwd ? Icon(Icons.visibility_off_rounded) :Icon(Icons.visibility_rounded) ,)
+                      child: xShowpwd ? const Icon(Icons.visibility_off_rounded) :const Icon(Icons.visibility_rounded) ,)
                   : null,
               fillColor: Colors.cyan,
               filled: true,
               hintText: "Password",
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 fontSize: 20,
                 color: Colors.black,
                 fontWeight: FontWeight.w600,
