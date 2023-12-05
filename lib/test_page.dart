@@ -11,7 +11,7 @@ class _TestPageState extends State<TestPage> {
   FocusNode pwdFocus = FocusNode();
   TextEditingController pwdTEC = TextEditingController();
   bool xPwd = false;
-  bool xShowpwd = false;
+  bool xShowpwd = true;
 
   @override
   Widget build(BuildContext context) {
