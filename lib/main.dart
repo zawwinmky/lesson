@@ -9,8 +9,8 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  FocusNode nameFocus = FocusNode();
-  FocusNode pwdFocus = FocusNode();
+ final FocusNode nameFocus = FocusNode();
+ final FocusNode pwdFocus = FocusNode();
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(0, 0, 0, 1.0),
-          leading: Padding(
-            padding: const EdgeInsets.only(left: 10.0),
+          backgroundColor: const Color.fromRGBO(0, 0, 0, 1.0),
+          leading: const Padding(
+            padding: EdgeInsets.only(left: 10.0),
             child: Icon(
               Icons.arrow_back_rounded,
               size: 35,
@@ -34,9 +34,9 @@ class MyApp extends StatelessWidget {
             width: 130,
           ),
         ),
-        backgroundColor: Color.fromRGBO(0, 0, 0, 1.0),
+        backgroundColor: const Color.fromRGBO(0, 0, 0, 1.0),
         body: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
               Container(
                 height: 70,
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(54, 54, 54, 1.0),
+                  color: const Color.fromRGBO(54, 54, 54, 1.0),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
                       nameFocus.unfocus();
                     },
                     focusNode: nameFocus,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: "Phone or Email",
                       hintStyle: TextStyle(
@@ -68,16 +68,16 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
                 height: 70,
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(54, 54, 54, 1.0),
+                  color: const Color.fromRGBO(54, 54, 54, 1.0),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Align(
                   alignment: Alignment.center,
                   child: TextField(
@@ -86,7 +86,7 @@ class MyApp extends StatelessWidget {
                     onTapOutside: (input) {
                       pwdFocus.unfocus();
                     },
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: "Password",
                       hintStyle: TextStyle(
@@ -97,7 +97,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
@@ -112,10 +112,10 @@ class MyApp extends StatelessWidget {
                 ),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromRGBO(0, 0, 0, 1.0),
+                    backgroundColor: const Color.fromRGBO(0, 0, 0, 1.0),
                   ),
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     "Sign in",
                     style: TextStyle(
                         fontSize: 22,
@@ -124,33 +124,33 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
-              Text(
+              const Text(
                 "Forgot Password?",
                 style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
                     color: Color.fromRGBO(175, 175, 175, 1.0)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 35,
               ),
-              Text("New to Neflix? Sign up now.",
+              const Text("New to Netflix? Sign up now.",
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
                       color: Color.fromRGBO(175, 175, 175, 1.0))),
-              SizedBox(
+              const SizedBox(
                 height: 35,
               ),
-              Text(
+              const Text(
                 "Sign in is protected by Google reCAPTCHA to ensuere you're not a bot.",
                 style: TextStyle(
                     fontSize: 11, color: Color.fromRGBO(95, 95, 95, 1.0)),
               ),
-              Text(
+              const Text(
                 "Learn more.",
                 style: TextStyle(
                     fontSize: 12, color: Color.fromRGBO(95, 95, 95, 1.0)),
