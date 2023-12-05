@@ -31,6 +31,7 @@ class _TestPageState extends State<TestPage> {
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Center(
           child: TextField(
+            obscuringCharacter: "*",
             controller: pwdTEC,
             onTapOutside: (input) {
               pwdFocus.unfocus();
@@ -72,6 +73,7 @@ class _TestPageState extends State<TestPage> {
     } else {
       setState(() {
         xPwd = false;
+        xShowpwd = true;
       });
     }
   }
